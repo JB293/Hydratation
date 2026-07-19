@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+        
+        
+    </table>
+    <script>
+        do {
+            var employe = parseInt(prompt("Entrez le nombre d\'employe compris entre 5 et 10"));
+        } while (employe < 5 || employe > 10 ||isNaN(employe));
+        document.write(`
+         <table>
+        <caption>Bulletin annuel</caption>
+        <tr>
+            <th>Nom</th>
+            <th>Salaire</th>
+            <th colspan="3">Mois</th>
+        </tr>
+       
+        <tr>
+            <td>Jan</td>
+            <td>Fev</td>
+            <td>Mars</td>
+           
+        </tr>
+        `)
+        for (let i = 1; i < employe; i++) {
+            var nom = prompt('Entrez le nom employe ' + i)
+            for (let j = 1; j <= 12; j++) {
+                do {
+                var salaire = prompt('Entrez le salaire ' + j)
+                } while (salaire <300000 || salaire >600000 || isNaN(salaire));
+            }
+            
+            document.write(`
+             <tr>
+            <td>${nom}</td>
+            <td>${salaire}</td>
+            <td></td>
+           
+        </tr>
+            `)
+            
+        }
+    </script> 
+</body>
+</html>
+
+<!-- Le salaire moyen mensuel -->
